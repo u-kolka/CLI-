@@ -16,21 +16,18 @@ async function writeDB(updatedContacts) {
 
 async function listContacts() {
     const contacts = await readDb();
-    console.log(contacts)
     return contacts;
 }
 
 async function getContactById(contactId) {
     const contacts = await readDb();
     const contact = contacts.filter((contact) => contact.id === contactId.toString());
-    console.log(contact)
     return contact;
 }
 
 async function removeContact(contactId) {
     const contacts = await readDb();
     const updatedContacts = contacts.filter((contact) => contact.id !== contactId);
-    console.log(updatedContacts)
     await writeDB(updatedContacts);
 }
 
@@ -38,8 +35,8 @@ async function addContact(name, email, phone) {
     const id = nanoid();
     const contact = { id, name, email, phone };
     const contacts = await readDb();
+
     contacts.push(contact);
-    console.log(contacts)
     await writeDB(contacts);
 }
 
