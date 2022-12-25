@@ -1,0 +1,19 @@
+{
+  "name": "node-homework-1",
+  "version": "0.0.1",
+  "description": "homework-1",
+  "main": "index.js",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "start:dev": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nanoid": "^3.3.4",
+    "yargs": "^17.6.2"
+  }
+}
